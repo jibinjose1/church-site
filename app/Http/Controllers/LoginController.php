@@ -15,13 +15,9 @@ class LoginController extends Controller
     }
     public function doLogin(Request $request)
     {
-        $request->validate([
-            'username' => 'required',
-            'password' => 'required'
-        ]);
         $username      = $request->username;
         $userPasswod   = $request->password;
-        
+        $userData      = userRegister::first();
         if(Auth::attempt(['username'=>$username,'password'=>$userPasswod]))
         {
             return redirect('/');

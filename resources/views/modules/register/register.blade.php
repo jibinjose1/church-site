@@ -1,20 +1,11 @@
 @extends('default')
+@section('title','Pazhoor: Register')
 <div class="registerForm" id="registerForm">
     <form action="{{('doRegister')}}" method="post" id="doRegister" autocomplete="off">
     @csrf('token')
         <div class="form-group">
-            <label for="">Full Name</label>
-            <input type="text" class="form-control" name="fullname" id="fullname">
-        </div>
-
-        <div class="form-group">
-            <label for="">Address</label>
-            <input type="text" class="form-control" name="address" id="address">
-        </div>
-
-        <div class="form-group">
-            <label for="">Pin Code</label>
-            <input type="text" class="form-control" name="pincode" id="pincode">
+            <label for="">First Name</label>
+            <input type="text" class="form-control" name="firstname" id="firstname">
         </div>
 
         <div class="form-group">
@@ -25,11 +16,6 @@
         <div class="form-group">
             <label for="">Phone</label>
             <input type="text" class="form-control" name="phone" id="phone">
-        </div>
-        
-        <div class="form-group">
-            <label for="">User Name</label>
-            <input type="text" class="form-control" name="userName" id="userName">
         </div>
 
         <div class="form-group">

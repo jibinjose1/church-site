@@ -1,19 +1,115 @@
+html{
+    scroll-behavior: smooth;
+}
 *{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.m-0{
+    margin:0;
 }
 body{
     margin:0px;
     padding:0px;
-    background-color: lightgray;
 }
-h4{
-    color: red;
+.movingBackground{
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    animation: movingBackground 30s ease-in-out infinite;
+}
+.movingBackground .movingBackgroundImage{
+    height: 100vh;
+    width: 100%;
+}
+@keyframes movingBackground{
+    0%,100%{
+        background-image: url("/images/cross1.jpg");
+    }
+    25%{
+        background-image: url("/images/japamala1.jpg");
+    }
+    50%{
+        background-image: url("/images/cross2.jpg");
+    }
+    75%{
+        background-image: url("/images/bible2.jpg");
+    }
+}
+.movingBackgroundText p{
+    position: absolute;
+    top: 40%;
+    left: 3%;
+    /* transform: translate(-50%,-30%); */
+    color:#fff;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Lucida Calligraphy;
+ }
+ .movingBackgroundText h1{
+    position: absolute;
+    top: 40%;
+    left: 6%;
+    font-size: 150px;
+    font-family:Arial black;
+    color: #fff;
+ }
+ .movingBackgroundText span{
+    position: absolute;
+    top: 65%;
+    left: 60%;
+    font-size: 40px;
+    font-family:arial black;
+    color: #fff;
+ }
+ 
+.headerSection{
+    height: 140px;
+    background-color: rgb(161, 115, 29);
+}
+.headerSection p{
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.8;
+}
+.headerSection span{
+    color: #fff;
+    text-align: center; 
+}
+.head-p{
+    color: #000;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    font-weight: bold;
+    text-align: center;
+}
+.head-p p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 0px 2px 2px #000;
+    font-size: 20px;
+}
+.head-p .messageP{
+    font-size: 16px;
+    font-family:Lucida Calligraphy;
+    color: goldenrod;
 }
 .main-link{
-    background-color: orangered;
+    background-color: rgb(230, 99, 39);;
+    display: flex;
+    z-index: 1;
+    position: fixed;
 }
-.navlink{
-    padding: 2px;
+.main-head{
+    color: #fff;
+    margin: 15px 0px;
+    font-family: Lucida Calligraphy;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px #000;
+    text-align: center;
+}
+.main-head p{
+    font-size: 14px;
 }
 .navlink li{
     list-style-type: none;
@@ -26,7 +122,6 @@ h4{
     font-weight: 500;
     transition: 0.5s ease-in-out;
     cursor: pointer;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border: 2px solid #fff;
     padding: 4px;
     font-family: Arial Black;
@@ -38,6 +133,50 @@ h4{
     color: #000;
     border-radius: 15px;
     text-shadow: 2px 2px 8px #000;
+}
+.navlink ul a{
+    text-decoration: none;
+}
+.navlink .active{
+    background-color: #fff;
+    color: #000;
+    border-radius: 15px;
+    text-shadow: 2px 2px 8px #000;
+}
+#stAntonys{
+    height: 100vh;
+}
+.stAntony img{
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.stAntony p{
+    /* width: 900px; */
+    font-weight: bold;
+    /* font-family: ; */
+}
+.stAntony img:hover{
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.5);
+}
+.updatesDiv{
+    border: 2px solid #000;
+    /* height: 500px; */
+}
+.updatesDiv ul li{
+    list-style-type: none;
+    text-align: left;
+    background-color: rgb(146, 139, 139);
+    border-bottom:2px solid #fff;
+    padding: 20px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.5s ease-in-out
+}
+.updatesDiv ul li:hover{
+    background-color: rgb(9, 126, 155);
+    
 }
 .loginForm{
     width: 400px;
@@ -81,40 +220,82 @@ h4{
 .registerForm .form-group label{
     color: rgb(255, 255, 255);
 }
-.head-section{
-    padding-top: 15px;
-    text-align: center;
-    font-size: 30px;
-    color: white;
-    font-family: Lucida Calligraphy;
-    font-weight: bold;
-    color: #fff;
-    text-shadow: 2px 2px 8px #000;
-}
-.head-section p{
-    font-size: 16px;
-}
 .image-div{
-    margin:40px 60px;
-    box-shadow: 0px 3px 10px #000;
+    margin:40px 20px;
+    /* box-shadow: 0px px px #fff; */
     cursor: pointer;
     transition: 0.5s ease-in-out;
+}
+.image-div img{
+    border-radius: 10px;
 }
 .image-div:hover{
     transform:scale(.8);
 }
 .massDiv{
-    border: 4px solid #000;
-    margin: 10px 20px;
-    padding: 8px;
+   text-align: center;
 }
-.massDiv h3{
-    font-family: Bahnschrift Condensed;
+.massSubDiv1,.massSubDiv2,.massSubDiv3,.massSubDiv4{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+.massSubDiv1{
+    background-color: rgb(12, 112, 170);
+}
+.massSubDiv2{
+    background-color: rgb(233, 112, 14);
+}
+.massSubDiv3{
+    background-color: rgb(112, 6, 20);
+}
+.massSubDiv4{
+    background-color: rgb(15, 121, 55);
+}
+.massDiv p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 20px;
     color: #000;
+    font-weight: bold;
 }
-.footerDiv{
-    background-color: #000;
+.massDivQuote{
+    height: 150px;
+    color: #fff;
+    padding: 30px 0px;
+    background-color: rgb(80, 78, 78);
+}
+.massDivQuote p{
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+}
+.novenaDiv p{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 17px;
+    color: orangered;
+}
+.churchHead h3{
+    font-family: Lucida Calligraphy;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(238, 139, 10);
+    text-shadow: 2px 2px 3px #000;
+}
+.churchHead p{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #fff;
+}
+/* .footerDiv{
+    background-color: rgb(141, 52, 52);
 }
 .footerDiv h4{
     color: orangered;
@@ -122,10 +303,173 @@ h4{
     font-family: Engravers MT;
     font-size: 14px;
 }
-.footerDiv ul,p{
+.footerDiv ul{
   font-size: 16px;
   color: grey;
   list-style-type: none;
   font-weight: bold;
   padding-left: 110px;
+} */
+
+.contact1,.contact2,.contact3{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    color: #fff;
+}
+.contact1{
+    background-color: rgb(207, 111, 22);
+}
+.contact1 p,.contact2 p,.contact3 p{
+    font-size: 18px;
+    font-family: Bahnschrift Condensed;
+}
+.contact2{
+    background-color: rgb(184, 38, 38);
+}
+.contact3{
+    background-color: rgb(34, 117, 172);
+}
+.contact3 span{
+    font-family: Lucida Calligraphy;
+    font-size: 12px;
+}
+.p-0{
+    padding: 0px;
+}
+.fa-map-marker,.fa-envelope,.fa-phone{
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+.faithDiv{
+    height: 100vh;
+    background-image: url('/images/antony3.jpg');
+    background-size: cover;
+    /* opacity: 0.7;     */
+}
+.faithDiv p{
+    text-align: center;
+    font-size: 45px;
+    color: #fff;
+    padding-top: 500px;
+    font-weight: bold;
+
+}
+#messageDiv{
+    width: 400px;
+    /* position: absolute; */
+    /* margin-top: 10px; */
+    /* left: 50%; */
+    /* transform: translate(-50%); */
+}
+#messageForm{
+    position: absolute;
+    /* margin-top: 30px; */
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+}
+.messageDiv .form-group .form-control{
+    width: 400px;
+}
+.footerDiv{
+    background-color: rgb(61, 60, 60);
+    height: 250px;
+    padding: 40px;
+}
+.footerDiv2{
+    background-color: rgb(61, 60, 60);
+    padding: 30px;
+}
+.footerDiv2 hr{
+    background-color: rgb(61, 60, 60);
+    width: 90%;
+}
+.footerDiv2SubDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: rgb(156, 148, 148);
+    font-size: 16px;
+}
+.footerDiv h4{
+    color: rgb(174, 179, 178);
+    text-align: center;
+    /* text-transform: uppercase; */
+}
+
+.footerDiv ul li{
+    list-style: none;
+    color: rgb(156, 148, 148);
+    font-size: 16px;
+    border-bottom: 1px solid lightgray;
+    padding: 10px 0px;
+}
+.spiritual1,.spiritual2,.spiritual3,.spiritual4{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    color: #fff;
+}
+.spiritual1{
+    background-color: goldenrod;
+}
+.spiritual2{
+    background-color: rgb(143, 5, 148);
+}
+.spiritual3{
+    background-color: rgb(168, 54, 20);
+}
+.spiritual4{
+    background-color: rgb(75, 14, 133);
+}
+.spiritual1 p,.spiritual2 p,.spiritual3 p,.spiritual4 p{
+    font-size: 30px;
+    font-weight: bold;
+}
+.idavakaDiv1,.idavakaDiv2,.idavakaDiv3,.idavakaDiv4,.idavakaDiv5,.idavakaDiv6,.idavakaDiv7,.idavakaDiv8{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+.idavakaDiv1{
+    background-color: rgb(160, 39, 99);
+}
+.idavakaDiv1:hover{
+    background-color: rgb(197, 99, 43);
+}
+.idavakaDiv2{
+    background-color: cadetblue;
+}
+.idavakaDiv3{
+    background-color: rgb(75, 107, 24);
+}
+.idavakaDiv4{
+    background-color: rgb(185, 59, 69);
+}
+.idavakaDiv5{
+    background-color: rgb(181, 192, 27);
+}
+.idavakaDiv6{
+    background-color: rgb(49, 30, 116);
+}
+.idavakaDiv7{
+    background-color: rgb(218, 109, 20);
+}
+.idavakaDiv8{
+    background-color: rgb(3, 51, 54);
+}
+.idavakaDiv1 p,.idavakaDiv2 p,.idavakaDiv3 p,.idavakaDiv4 p{
+    font-size: 16px;
 }
