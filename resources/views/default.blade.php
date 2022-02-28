@@ -27,47 +27,25 @@
         {{-- {{View::make('topbar')}} --}}
         @include('topbar')
         @yield('content')
+        @include('footer')
         {{-- {{View::make('footer')}} --}}
     </body>
     <script>
-       
+    //    var a = document.getElementById('input1').value;
+    //    if(a!=''){
+    //         document.getElementById('input2').disabled=false;
+    //    }
+    //    else{
+    //         document.getElementById('input2').disabled=true;
+    //    }
         $(document).ready(function(){
-        var loginForm;
-        loginForm = $('#doLogin').validate({
-            errorClass: 'error',
-            rules:{
-                username:{
-                    required:true
-                },
-                password:{
-                    required:true
-                },
-                imageFile:{
-                    required:true,
-                    extention:"png"
-                },
-                pdfFile:{
-                    required:true,
-                    extention: "pdf"
-                }
-            },
-            messages:{
-                username:{
-                    required:"please enter username",
-                },
-                password:{
-                    required:"please enter username",
-                },
-                imageFile:{
-                    required:"please select image",
-                },
-                pdfFile:{
-                    required:"please select pdf",
-                },
+            var a = $('#input1').val();
+            if(a!=''){
+                $('#input2').prop( "readonly",false);
+            }
+            else{
+                $('#input2').prop( "readonly",true);
             }
         });
-        });
-
-        $('.carousel').carousel()
     </script>
 </html>

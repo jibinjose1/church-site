@@ -1,25 +1,33 @@
-<div class="col-sm-12 col-md-12 col-lg-12 main-link">
-
-    <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
-        <div class="main-head">
-            St.Antony's Church <br>Pazhoor
+<div class="col-sm-12 col-md-12 col-lg-12 p-0">
+    <header class="main-link">
+        <div>
+            <p class="main-head">St.Antony's Church Pazhoor</p>
         </div>
-    </div>
-
-    <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10">
         <nav class="navlink">
-            <ul>
-                <a href="/"><li class="active">HOME</li></a>
-                <li>ABOUT THE SHRINE</li>
-                <li>HISTORY</li>
-                <a href="#holyDiv"><li>HOLY MASS TIMING</li></a>
-                <a href="#galleryDiv"><li>GALLERY</li></a>
-                <a href="#contactUsDiv"><li>TESTIMONIALS</li></a>
-                <a href="#contactUsDiv"><li>DOWNLOADS</li></a>
-                <a href="#contactUsDiv"><li>GET IN TOUCH</li></a>
-                <a href="login"><li>LOGIN</li></a>
-            </ul>
+            <a href="/">
+                <i class="fa fa-home"></i>
+                <span>THE SHRINE</span>
+            </a>
+            <a href="about">
+                <i class="fa fa-globe"></i>
+                <span>ABOUT US</span>
+            </a>
+            <a href="history">
+                <i class="fa fa-history"></i>
+                <span>HISTORY</span>
+            </a>
+            <a href="gallery">
+                <i class="fa fa-image"></i>
+                <span>GALLERY</span>
+            </a>
+            <a href="downloads">
+                <i class="fa fa-download"></i>
+                <span>DOWNLOADS</span>
+            </a>
+            <a href="contact">
+                <i class="fa fa-mobile"></i>
+                <span>CONTACT US</span>
+            </a>
         </nav>
-    </div>
-
+    </header>
 </div>

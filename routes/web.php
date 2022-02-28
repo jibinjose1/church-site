@@ -18,7 +18,14 @@ use App\Http\Controllers\RegisterController;
 
 
 Route::get('/',[HomeController::class,'home']);
+Route::get('/history',[HomeController::class,'history']);
+Route::get('/about',[HomeController::class,'about']);
+Route::get('/gallery',[HomeController::class,'gallery']);
+Route::get('/contact',[HomeController::class,'contact']);
+Route::get('/downloads',[HomeController::class,'downloads']);
+Route::post('/saveUserMessage',[HomeController::class,'saveUserMessage']);
 Route::get('/login',[LoginController::class,'login']);
 Route::get('/doLogin',[LoginController::class,'doLogin']);
 Route::get('/register',[RegisterController::class,'register']);
 Route::post('/doRegister',[RegisterController::class,'doRegister']);
+Route::get('/sample',[HomeController::class,'sample']);
